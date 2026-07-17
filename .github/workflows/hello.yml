@@ -6,5 +6,7 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Print a greeting
-        run: echo "Hello from GitHub Actions, this workflow ran successfully!"
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run check script
+        run: ./check.sh
